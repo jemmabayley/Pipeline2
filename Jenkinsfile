@@ -9,7 +9,7 @@ pipeline {
                 sh 'echo test > archive1/test.txt'
                 sh 'zip -r test.zip archive1'
                 sh 'ls -las'
-                archiveArtifacts artifacts: 'test.zip'
+                archiveArtifacts artifacts: 'test.zip', onlyIfSuccessful: true
             }
         }
     }
