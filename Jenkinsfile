@@ -7,6 +7,8 @@ pipeline {
                 sh 'echo "Hello"'
                  sh 'mkdir archive'
                 sh 'echo test > archive/test.txt'
+                sh 'zip -r test.zip archive'
+                sh 'ls -las'
             }
         }
     }
