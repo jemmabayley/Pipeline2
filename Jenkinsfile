@@ -10,7 +10,7 @@ pipeline {
                 sh 'zip -r test.zip archive1'
                 sh 'ls -las'
                 archiveArtifacts artifacts: 'test.zip', onlyIfSuccessful: true
-                sh 'rm .git
+                sh rm -rf .git
             }
         }
     }
